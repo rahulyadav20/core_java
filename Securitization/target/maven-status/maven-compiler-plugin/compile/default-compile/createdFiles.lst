@@ -1,0 +1,12 @@
+com\well\config\Properties.class
+com\well\config\AppConfig.class
+com\well\cache\DealTimeEvictionCacheCleaner.class
+com\well\config\PropConfig.class
+com\well\config\AppProperties.class
+com\well\cache\DealCacheCleanerTask.class
+com\well\cache\DealSizeEvictionCacheCleaner.class
+com\well\datasource\impl\DealDAOImpl.class
+com\well\datasource\DealDAO.class
+com\well\entity\Deal.class
+com\well\cache\DealCache.class
+com\well\cache\CacheCleanerThreadFactory.class
