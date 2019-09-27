@@ -1,0 +1,97 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+
+
+<!-- ‘no’ auto-Wiring mode -->
+	<bean id="college" class="spring.noautowiring.mode.College" autowire="no">
+		<property name="student" ref="student" />
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+	</bean>
+
+	<bean id="student" class="spring.noautowiring.mode.Student">
+		<property name="address" value="Delhi" />
+		<property name="age" value="22" />
+		<property name="name" value="Raj" />
+	</bean>
+<!-- End -->
+
+<!-- ‘byName’ auto-Wiring mode -->
+
+<bean id="college1" class="spring.byname.autowiring.mode.College" autowire-candidate="false">
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+</bean>
+
+<bean id="student1" class="spring.byname.autowiring.mode.Student">
+	<property name="address" value="Delhi" />
+	<property name="age" value="22" />
+	<property name="name" value="Raj" />
+</bean>	
+
+<!-- End -->
+
+<!-- ‘byType’ auto-Wiring mode -->
+
+<bean id="college2" class="spring.bytype.autowiring.mode.College" autowire="byType">
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+</bean>
+
+<bean id="student2" class="spring.bytype.autowiring.mode.Student">
+	<property name="address" value="Delhi" />
+	<property name="age" value="22" />
+	<property name="name" value="Raj" />
+</bean>	
+
+<!-- End -->
+
+<!-- Constructor auto-Wiring mode -->
+
+<bean id="college3" class="spring.constructor.autowiring.mode.College" autowire="constructor">
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+</bean>
+
+<bean id="student3" class="spring.constructor.autowiring.mode.Student">
+	<property name="address" value="Delhi" />
+	<property name="age" value="22" />
+	<property name="name" value="Raj" />
+</bean>	
+
+<!-- End -->
+
+<!-- autodetect auto-Wiring mode -->
+
+<bean id="college4" class="spring.autodetect.autowiring.mode.College" autowire="autodetect">
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+</bean>
+
+<bean id="student4" class="spring.autodetect.autowiring.mode.Student">
+	<property name="address" value="Delhi" />
+	<property name="age" value="22" />
+	<property name="name" value="Raj" />
+</bean>	
+
+<!-- End -->
+
+<!-- exclude auto-Wiring -->
+
+<bean id="college5" class="spring.exclude.autwiring.College" autowire-candidate="false">
+		<property name="registration" value="BL001" />
+		<property name="year" value="2001" />
+</bean>
+
+<bean id="student5" class="spring.exclude.autwiring.Student"  >
+	<property name="address" value="Delhi" />
+	<property name="age" value="22" />
+	<property name="name" value="Raj" />
+</bean>	
+
+<!-- End -->
+
+</beans>
