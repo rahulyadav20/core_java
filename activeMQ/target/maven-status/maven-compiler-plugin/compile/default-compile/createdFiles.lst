@@ -1,0 +1,4 @@
+com\javainuse\producer\Producer.class
+com\javainuse\consumer\Consumer.class
+com\sape\jms\activeMQ\App.class
+com\javainuse\main\TestMQ.class
